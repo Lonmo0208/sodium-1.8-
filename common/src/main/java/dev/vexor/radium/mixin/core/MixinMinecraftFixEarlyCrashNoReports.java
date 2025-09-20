@@ -62,7 +62,7 @@ public class MixinMinecraftFixEarlyCrashNoReports {
                 }
 
                 stringBuilder.append(string);
-                if (MixinMinecraftFixEarlyCrashNoReports.this.options.incompatibleResourcePacks.contains(string)) {
+                if (MixinMinecraftFixEarlyCrashNoReports.this.options.resourcePacks.contains(string)) {
                     stringBuilder.append(" (incompatible)");
                 }
             }
@@ -71,11 +71,13 @@ public class MixinMinecraftFixEarlyCrashNoReports {
         });
         crashReport.getSystemDetailsSection().add("Current Language", () -> MixinMinecraftFixEarlyCrashNoReports.this.languageManager.getLanguage().toString());
         crashReport.getSystemDetailsSection().add("Profiler Position", () -> MixinMinecraftFixEarlyCrashNoReports.this.profiler.enabled ? MixinMinecraftFixEarlyCrashNoReports.this.profiler.getCurrentLocation() : "N/A (disabled)");
-        crashReport.getSystemDetailsSection().add("CPU", GLX::getProcessor);
+        //crashReport.getSystemDetailsSection().add("CPU", GLX::getProcessor);
         if (this.world != null) {
             this.world.addToCrashReport(crashReport);
         }
-
         return crashReport;
     }
+    //public static String getProcessor() {
+        //return processor == null ? "<unknown>" : processor;
+    //}
 }

@@ -78,7 +78,7 @@
     "sodium-fabric.mixins.json"
   ],
   "depends" : {
-    "minecraft": ["1.8.9"],
+    "minecraft": [">=1.8","<=1.8.9"],
     "fabricloader" : ">=0.16.0"
   },
   "breaks" : {

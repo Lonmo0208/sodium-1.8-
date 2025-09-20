@@ -2,7 +2,7 @@ plugins {
     id("multiloader-base")
     id("java-library")
 
-    id("fabric-loom") version ("1.8.9")
+    id("fabric-loom") version ("1.10.1")
 }
 
 base {
@@ -32,7 +32,7 @@ repositories {
 
 dependencies {
     minecraft(group = "com.mojang", name = "minecraft", version = BuildConfig.MINECRAFT_VERSION)
-    mappings("net.legacyfabric:yarn:1.8.9+build.551:v2")
+    mappings("net.legacyfabric:yarn:1.8.9+build.571:v2")
 
     implementation("org.joml:joml:1.10.8")
     implementation("it.unimi.dsi:fastutil:8.5.15")

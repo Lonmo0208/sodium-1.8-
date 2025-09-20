@@ -1,7 +1,7 @@
 plugins {
     id("multiloader-platform")
 
-    id("fabric-loom") version ("1.8.9")
+    id("fabric-loom") version ("1.10.1")
 }
 
 base {
@@ -60,7 +60,7 @@ sourceSets.apply {
 
 dependencies {
     minecraft(group = "com.mojang", name = "minecraft", version = BuildConfig.MINECRAFT_VERSION)
-    mappings("net.legacyfabric:yarn:1.8.9+build.551:v2")
+    mappings("net.legacyfabric:yarn:1.8.9+build.571:v2")
 
     implementation(project(":lwjgl3", configuration = "default"))
 
